@@ -10,7 +10,20 @@ public class Drink {
       System.out.println("3 どちらでもない(c)");
       System.out.println("1,2,3のどれかを選んでください(a,b,cでも可)。");
       String line = reader.readLine();
-      char c = line.charAt(0);
+      // 入力画面で空文字だったときの対策
+      char c ;
+      if (line.length() > 0) {
+        c = line.charAt(0);
+      } else {
+        c = 'c';
+      }
+      // 以下の書き方も可
+      // char c ;
+      // if (line.equals("")) {
+      //   c = 'c';
+      // } else {
+      //   c = line.charAt(0);
+      // }
 
       switch (c) {
         case '1':
