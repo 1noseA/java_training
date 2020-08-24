@@ -5,18 +5,18 @@ public class Drink {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     try {
       System.out.println("飲み物は何が好きですか？");
-      System.out.println("1 オレンジジュース");
-      System.out.println("2 コーヒー");
-      System.out.println("3 どちらでもない");
-      System.out.println("1,2,3のどれかを選んでください。");
+      System.out.println("a オレンジジュース");
+      System.out.println("b コーヒー");
+      System.out.println("c どちらでもない");
+      System.out.println("a,b,cのどれかを選んでください。");
       String line = reader.readLine();
-      int n = Integer.parseInt(line);
+      char c = line.charAt(0);
 
-      switch (n) {
-        case 1:
+      switch (c) {
+        case 'a':
         System.out.println("オレンジジュースです。");
         break;
-        case 2:
+        case 'b':
         System.out.println("コーヒーです。");
         break;
         default:
