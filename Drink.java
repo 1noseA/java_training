@@ -5,17 +5,19 @@ public class Drink {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     try {
       System.out.println("飲み物は何が好きですか？");
-      System.out.println("a オレンジジュース");
-      System.out.println("b コーヒー");
-      System.out.println("c どちらでもない");
-      System.out.println("a,b,cのどれかを選んでください。");
+      System.out.println("1 オレンジジュース(a)");
+      System.out.println("2 コーヒー(b)");
+      System.out.println("3 どちらでもない(c)");
+      System.out.println("1,2,3のどれかを選んでください(a,b,cでも可)。");
       String line = reader.readLine();
       char c = line.charAt(0);
 
       switch (c) {
+        case '1':
         case 'a':
         System.out.println("オレンジジュースです。");
         break;
+        case '2':
         case 'b':
         System.out.println("コーヒーです。");
         break;
@@ -25,8 +27,6 @@ public class Drink {
       }
     } catch (IOException e) {
       System.out.println(e);
-    } catch (NumberFormatException e) {
-      System.out.println("数字の形式が正しくありません。");
     }
   }
 }
