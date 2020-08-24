@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class Kasa {
-  public static void main(String[]args) {
+  public static void main(String[] args) {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     try {
       System.out.println("降水確率を入力してください。");
